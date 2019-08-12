@@ -2,6 +2,7 @@ import { Component } from 'react';
 import axios from 'axios'
 import {store} from '../redux/store';
 import {Provider} from 'react-redux';
+import { Container, Row, Col } from 'react-bootstrap';
 class App extends Component {
 
     static async getInitialProps() {
@@ -12,7 +13,13 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <h1>yolo</h1>
+                <Container fluid>
+                    <Row className='flex-grow-1'>
+                        <Col className="bg-primary"></Col>
+                        <Col className="bg-info "></Col>
+                        <Col className="bg-danger"></Col>
+                    </Row>
+                </Container>
             </Provider>
         );
     };

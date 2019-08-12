@@ -12,3 +12,10 @@ exports.list = function (req, res) {
             res.json(results);
         });
 };
+
+exports.post = (req, res) => {
+    Post.model.findById(req.params.id, (err, post) => {
+        if(err) throw err;
+        res.json(post)
+    })
+}

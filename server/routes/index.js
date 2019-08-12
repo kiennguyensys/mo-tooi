@@ -14,6 +14,7 @@ exports = module.exports = nextApp => keystoneApp => {
 	const handle = nextApp.getRequestHandler();
 
 	keystoneApp.get('/api/posts', keystone.middleware.api, routes.api.posts.list);
+    keystoneApp.get('/api/:id', keystone.middleware.api, routes.api.posts.post);
 	keystoneApp.get('*', (req, res) => {
 		return handle(req, res);
 	});
