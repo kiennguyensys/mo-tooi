@@ -1,4 +1,4 @@
-import {LOADING, GET_PEOPLE, GET_PERSON, CHOOSE_PERSON, SET_ALL_PAGE} from '../actions/actions';
+import {LOADING, GET_PEOPLE, GET_PERSON, CHOOSE_PERSON, SET_ALL_PAGE} from '../actions/actions.js';
 import { combineReducers } from 'redux';
 
 const getPeople = (state = [], action) => {
