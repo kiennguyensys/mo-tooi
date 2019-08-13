@@ -2,7 +2,13 @@ import { Component } from 'react';
 import axios from 'axios'
 import {connect} from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
+import AppBar from '../components/appbar';
+import Link from 'next/link';
+// import Background from './styles/images/foreground.png';
+// import styles from './styles/index.css';
 
+const Background = '/static/foreground3.png'
+// const Background = 'https://res.cloudinary.com/giaphatocphamphu/image/upload/v1563523660/phadobg.png'
 class Index extends Component {
 
     static async getInitialProps({store, isServer, pathname, query}) {
@@ -12,13 +18,16 @@ class Index extends Component {
 
     render() {
         return (
-            <Container fluid>
-                <Row className='flex-grow-1'>
-                    <Col className="bg-primary"></Col>
-                    <Col className="bg-info "></Col>
-                    <Col className="bg-danger"></Col>
-                </Row>
+            <Container fluid
+                style={{
+                    height: '100vh',
+                    backgroundImage: `url(${Background})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            >
             </Container>
+
         );
     };
 }
