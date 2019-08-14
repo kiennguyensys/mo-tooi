@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Nav } from 'react-bootstrap';
+import { Container, Nav, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 class AppBar extends Component {
 
@@ -18,11 +18,15 @@ class AppBar extends Component {
                     <Nav.Item><Link href='/literrature'><a>VĂN</a></Link></Nav.Item>
                     <Nav.Item><Link href='/about'><a>THÔNG TIN</a></Link></Nav.Item>
                 </div>
-                <div className='warning-container'>
-                    <img className="warning" src='/static/warning-icon.png'/>
-                    <div style={{background: "#ca5e42", width: "2px", margin: "2px"}}></div>
-                    <h6 style={{color: "#ca5e42"}}>Đọc quá 180 phút mỗi ảnh hưởng xấu đến sức khoẻ</h6>
-                </div>
+                <Container className='warning-container p-0 m-0'>
+                    <Row className='p-0 m-0'>
+                        <Col lg={3} md={3} xl={3} className='p-0 m-0'><img className="warning" src='/static/warning-icon.png'/></Col>
+                        <Col lg={8} md={8} xl={8} className='p-0 m-0' style={{display: 'flex', flexDirection: 'row'}}>
+                            <div style={{background: "#ca5e42", width: "4px", marginTop: "4px", marginBottom: "4px", }}/>
+                            <h6 style={{color: "#ca5e42", marginLeft: "2px"}}>Đọc quá 180 phút một ngày ảnh hưởng xấu đến sức khoẻ</h6>
+                        </Col>
+                    </Row>
+                </Container>
                 <style type="text/css">
                     {`
                         a{
@@ -44,12 +48,15 @@ class AppBar extends Component {
                         }
                         .warning{
                             height: auto;
-                            width: 80px;
+                            width: 100%
                         }
                         .warning-container{
+                            margin-top: 30%;
                             background: linear-gradient(90deg, rgba(235,187,141,1) 35%, rgba(245,232,215,1) 100%);
                             display: flex;
                             flex-direction: row;
+                            width: 65%;
+                            transform: translateY(190%)
                         }
                         .links{
                             margin-top: 40px;

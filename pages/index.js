@@ -18,15 +18,34 @@ class Index extends Component {
 
     render() {
         return (
-            <Container fluid
+            <div
                 style={{
                     height: '100vh',
                     backgroundImage: `url(${Background})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    alignItems: 'flex-end',
+                    padding: '10px',
                 }}
             >
-            </Container>
+                <a className="link" href='https://www.facebook.com/khooi.dng'><img className='icon' alt='fb' src="/static/fb-icon.png"/></a>
+                <a href="https://www.instagram.com/khoi.dng/"><img className='icon' src="/static/ins-icon.png"/></a>
+                <style jsx>
+                    {`
+                        .icon{
+                            width: auto;
+                            height: 50px;
+                            -webkit-transform: rotate(270deg);
+                            -moz-transform: rotate(270deg);
+                            -o-transform: rotate(270deg);
+                            -ms-transform: rotate(270deg);
+                            transform: rotate(270deg);
+                        }
+                    `}
+                </style>
+            </div>
 
         );
     };
