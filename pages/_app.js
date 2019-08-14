@@ -41,22 +41,20 @@ class MyApp extends App {
                                     height: 100vh;
                                 }
                                 .page-transition-enter {
-                                   opacity: 1;
-                                   transform: translate3d(+100%, 0 , 0);
+                                   transform: translateX(+100%);
                                  }
                                  .page-transition-enter-active {
-                                     opacity: 1;
-                                     transform: translate3d(0, 0, 0);
-                                     transition: opacity 500ms, transform 300ms;
+                                     transform: translateX(0);
+                                     transition: transform 250ms linear;
+                                     will-change: transform;
                                  }
                                  .page-transition-exit {
-                                     opacity: 1;
-                                     transform: translate3d(0, 0, 0);
-                                     transition: opacity 500ms, transform 300ms;
+                                     transform: translateX(0);
+                                     transition: transform 300ms linear;
+                                     will-change: transform;
                                  }
                                  .page-transition-exit-active {
-                                     opacity: 1;
-                                     transform: translate3d(+100%, 0 , 0);
+                                     transform: translateX(+100%);
                                  }
 
                             `}

@@ -18,6 +18,11 @@ class AppBar extends Component {
                     <Nav.Item><Link href='/literrature'><a>VĂN</a></Link></Nav.Item>
                     <Nav.Item><Link href='/about'><a>THÔNG TIN</a></Link></Nav.Item>
                 </div>
+                <div className='warning-container'>
+                    <img className="warning" src='/static/warning-icon.png'/>
+                    <div style={{background: "#ca5e42", width: "2px", margin: "2px"}}></div>
+                    <h6 style={{color: "#ca5e42"}}>Đọc quá 180 phút mỗi ảnh hưởng xấu đến sức khoẻ</h6>
+                </div>
                 <style type="text/css">
                     {`
                         a{
@@ -36,6 +41,15 @@ class AppBar extends Component {
                             height: auto;
                             width: 300px;
                             margin-bottom: 30px;
+                        }
+                        .warning{
+                            height: auto;
+                            width: 80px;
+                        }
+                        .warning-container{
+                            background: linear-gradient(90deg, rgba(235,187,141,1) 35%, rgba(245,232,215,1) 100%);
+                            display: flex;
+                            flex-direction: row;
                         }
                         .links{
                             margin-top: 40px;

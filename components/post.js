@@ -4,10 +4,16 @@ import Card from 'react-bootstrap/Card'
 class Post extends Component {
 
     render() {
+        const {title, content} = this.props.post
         return (
             <Card className='slap' style={{background: "#42777f", border: 'none'}}>
-                <Card.Title style={{color: '#f5e8d7'}}>HOÀNG VÂN</Card.Title>
-                <Card.Text style={{color: '#f5e8d7', opacity: '0.7'}}>khôi yêu vân quá, yêu ghê, yêu cực yêu nề yêu nề yêu mề jeeeeeeeeeeeeeeee</Card.Text>
+                <Card.Body>
+                    <Card.Title style={{color: '#f5e8d7'}}>{title}</Card.Title>
+                    <div style={{justifyContent: 'space-between'}}>
+                        <Card.Text style={{color: '#f5e8d7', opacity: '0.7'}}><div dangerouslySetInnerHTML={{ __html: content.brief }}/></Card.Text>
+                        <Card.Text>11/20/2012</Card.Text>
+                    </div>
+                </Card.Body>
             </Card>
         );
     }
