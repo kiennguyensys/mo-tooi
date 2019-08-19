@@ -39,8 +39,8 @@ class Poems extends Component {
                         background: #42777f
                         .grid-container{
                             display: grid;
-                            grid-template-columns: 30% 30% 30%;
-                            grid-template-rows: 30% 30% 30%;
+                            grid-template-columns: 40% 40%;
+                            grid-template-rows: 25% 25% 25%; 
                             align-content: center;
                             justify-content: center;
                         }

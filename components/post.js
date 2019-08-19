@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
-import { Contain } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 class Post extends Component {
 
     render() {
         const {title, content} = this.props.post
         return (
-            <Card className='slap' style={{background: "#42777f", border: 'none'}}>
-                <Card.Body>
-                    <Card.Title style={{color: '#f5e8d7'}}>{title}</Card.Title>
-                    <div style={{justifyContent: 'space-between'}}>
-                        <Card.Text style={{color: '#f5e8d7', opacity: '0.7'}}><div dangerouslySetInnerHTML={{ __html: content.brief }}/></Card.Text>
-                        <Card.Text>11/20/2012</Card.Text>
-                    </div>
-                </Card.Body>
-            </Card>
+	    <Container style={{flexDirection: 'column', justifyContent: 'space-between', display: 'flex'}}>
+		<div>		
+		<h4 className="title">{title.toUpperCase()}</h4>
+		<div style={{color: "#f5e8d7", opacity: '0.7'}} dangerouslySetInnerHTML={{ __html: content.brief }}></div>
+		</div>
+		<p className='time'>20 11 2019</p>
+		<style jsx>
+		    {`
+			.title{
+			    color: #f5e8d7;
+			}	    
+			.time{
+			    color: #f5e8d7;
+			    align-self: end;
+			}
+			    
+		
+		    `}	
+		</style>
+	    </Container>
         );
     }
 
