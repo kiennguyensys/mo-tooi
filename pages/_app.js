@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-import {store} from '../redux/store';
+import {store} from '../containers/store';
 import {Provider} from 'react-redux';
 import withRedux from "next-redux-wrapper";
 import App, {Container} from "next/app";

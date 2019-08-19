@@ -5,16 +5,16 @@ import { Container, Row, Col, Nav, CardColumns } from 'react-bootstrap';
 import AppBar from '../components/appbar';
 import Link from 'next/link';
 import Post from '../components/post';
+import {fetchPoemsData} from '../containers/Poems/actions.js'
+
 class Poems extends Component {
 
-    static async getInitialProps() {
-        try {
-            const response = await axios.get('http://localhost:3000/api/posts');
-            console.log(response);
-            return {posts: response.data}
-        } catch (error) {
-            console.error(error);
-        }
+    static getInitalProps ({ reduxStore, req }) {
+        return {}
+    }
+
+    componentDidMount() {
+        this.props.fetchPoemsData()
     }
 
     render() {
@@ -52,4 +52,14 @@ class Poems extends Component {
 
 }
 
-export default Poems;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.poem
+  }
+}
+
+const mapDispatchToProps = { fetchPoemsData }
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(Poems)
