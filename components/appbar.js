@@ -35,7 +35,7 @@ class AppBar extends Component {
                             padding: 0px
                         }
                         a:hover{
-                            color: #ca5e42;
+                            Color: #ca5e42;
                         }
                         h4{
                             color: #42777f;
