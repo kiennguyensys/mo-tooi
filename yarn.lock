@@ -8152,9 +8152,9 @@ tinycolor2@^1.4.1:
   integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
 
 tinymce@^4.9.2:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.5.tgz#ada57b1d8aab7f280d4df94b25b8147c1074b354"
-  integrity sha512-ID7oGvk7qYjx3rYck4vRkQLEM5jYKIik2JlNwKrUogZ/1c2tXHJ5Y8/Y74/IULyqlxClNdlE4d+YXzUTPvP1og==
+  version "4.9.8"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.8.tgz#1f470a9defe3b52845fd51147cb226d44740750e"
+  integrity sha512-587xEh2+otXUNz4FVC8vBogMWpCxhiUIKNYQwOuqao9CHtCVXGHnK2rpEQHE6RsSTLsERpoMsAVte3K6KXoGzQ==
 
 tmp@^0.0.33:
   version "0.0.33"
